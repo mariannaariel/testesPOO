@@ -20,30 +20,27 @@ public class ConquistaTest {
 
     @Test
     public void testgetNome (){
-        Jogo vermelho = new Jogo("Vermelho", "tuts", 40);
-        vermelho.setConquista("brilha", "Parabens! Você derrotou o primeiro BOSS.", 15);
-        assertEquals("Vermelho",vermelho.getNome());
+        Conquista primeiro = new Conquista("Fashion", "conseguiu todos cosméticos equipáveis", 15);
+        assertEquals("Fashion",primeiro.getNome());
     }
     
     @Test
     public void testgetDescricao (){
-        Jogo vermelho = new Jogo("Vermelho", "tuts", 40);
-        vermelho.setConquista("brilha", "Parabens! Você derrotou o primeiro BOSS.", 15);
-        assertEquals("tuts",vermelho.getDescricao());
+        Conquista primeiro = new Conquista("Fashion", "conseguiu todos cosméticos equipáveis", 15);
+        assertEquals("conseguiu todos cosméticos equipáveis",primeiro.getDescricao());
     }
 
     @Test
     public void testgetProgressoAObter (){
-        Jogo vermelho = new Jogo("Vermelho", "tuts", 40);
-        vermelho.setConquista("brilha", "Parabens! Você derrotou o primeiro BOSS.", 15);
-        assertEquals(15, vermelho.getProgressoAObter());
+        Conquista primeiro = new Conquista("Fashion", "conseguiu todos cosméticos equipáveis", 15);
+        assertEquals(15,primeiro.getProgressoAObter()); 
     }
 
     @Test
     public void isObtida (){
-        Jogo vermelho = new Jogo("Vermelho", "tuts", 40);
-        vermelho.setConquista("brilha", "Parabens! Você derrotou o primeiro BOSS.", 15);
-        assertEquals(false,vermelho.isObtida());
+        Conquista primeiro = new Conquista("Fashion", "conseguiu todos cosméticos equipáveis", 15);
+        primeiro.setObtida(true);
+        assertEquals(true,primeiro.isObtida()); 
     }
 
 }

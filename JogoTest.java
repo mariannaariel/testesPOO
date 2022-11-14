@@ -1,4 +1,9 @@
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,14 +30,16 @@ public class JogoTest {
         assertEquals(40,verde.getHorasJogadas());
 
     }
-    /*/
+
     @Test
     public void testgetConquistas(){
         Jogo vermelho = new Jogo("Vermelho", "tuts", 40);
         vermelho.setConquista("brilha", "Parabens! Você derrotou o primeiro BOSS.", 15);
-        vermelho.setConquista("brilha estrelinha", "Parabens! Você chegou na metade do jogo.", 50);
+        Conquista tre = vermelho.getConquistas().get(0);
         vermelho.Jogar("20");
-        assertEquals("brilha","Parabens! Você derrotou o primeiro BOSS.",vermelho.getConquistas());
+        List <Conquista> tra = new ArrayList<Conquista>();
+        tra.add(tre);
+        assertEquals(tra, vermelho.getConquistas());
 
-    }/*/
+    }
 }
